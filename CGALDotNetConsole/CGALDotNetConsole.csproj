@@ -18,12 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CGALDotNetGeometry">
-      <HintPath>..\..\CGALDotNetGeometry\CGALDotNetGeometry\bin\Release\netcoreapp3.1\CGALDotNetGeometry.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -39,7 +33,6 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)x64\$(ConfigurationName)\CGALWrapper.dll&quot; &quot;$(ProjectDir)bin\$(ConfigurationName)\netcoreapp3.1&quot; /y&#xD;&#xA;xcopy &quot;C:\dev\vcpkg\installed\x64-windows\bin\gmp.dll&quot; &quot;$(ProjectDir)bin\$(ConfigurationName)\netcoreapp3.1&quot; /y&#xD;&#xA;xcopy &quot;C:\dev\vcpkg\installed\x64-windows\bin\mpfr-6.dll&quot; &quot;$(ProjectDir)bin\$(ConfigurationName)\netcoreapp3.1&quot; /y" />
   </Target>
 
 </Project>
